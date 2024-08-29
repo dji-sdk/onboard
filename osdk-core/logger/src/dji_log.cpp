@@ -41,8 +41,10 @@ Log::Log(Mutex* m)
   {
     mutex = m;
     this->initFlag = true;
+  } else {
+    this->initFlag = false;
   }
-  this->initFlag = false;
+
   this->enable_status = true;
   this->enable_debug  = false;
   this->enable_error = true;
